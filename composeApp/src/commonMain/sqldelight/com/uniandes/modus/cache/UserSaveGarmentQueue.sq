@@ -1,0 +1,18 @@
+CREATE TABLE IF NOT EXISTS user_save_garment_queue (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_document TEXT NOT NULL,
+    garment_reference TEXT NOT NULL,
+    action TEXT NOT NULL CHECK(action IN ('save', 'delete')),
+    timestamp TEXT NOT NULL
+);
+
+insertQueue:
+INSERT INTO user_save_garment_queue (
+    user_document, garment_reference, action, timestamp
+) VALUES (?, ?, ?, ?);
+
+selectAllQueue:
+SELECT * FROM user_save_garment_queue ORDER BY id;
+
+deleteQueueById:
+DELETE FROM user_save_garment_queue WHERE id = ?;

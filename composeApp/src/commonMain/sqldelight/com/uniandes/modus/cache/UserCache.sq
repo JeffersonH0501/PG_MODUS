@@ -1,0 +1,20 @@
+CREATE TABLE user_cache (
+    document TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    phone TEXT NOT NULL,
+    department TEXT NOT NULL,
+    city TEXT NOT NULL,
+    address TEXT NOT NULL,
+    role TEXT NOT NULL
+);
+
+selectUser:
+SELECT * FROM user_cache LIMIT 1;
+
+deleteUser:
+DELETE FROM user_cache;
+
+insertOrReplace:
+INSERT OR REPLACE INTO user_cache(document, name, email, phone, department, city, address, role)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?);

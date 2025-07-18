@@ -1,0 +1,21 @@
+CREATE TABLE card_cache (
+    user_document TEXT NOT NULL,
+    year TEXT NOT NULL,
+    week TEXT NOT NULL,
+    numbers TEXT NOT NULL,
+    PRIMARY KEY (user_document, year, week)
+);
+
+selectYearCardsByUser:
+SELECT * FROM card_cache WHERE user_document = ? AND year = ?;
+
+selectCardByUser:
+SELECT * FROM card_cache WHERE user_document = ? AND year = ? AND week = ?;
+
+insertOrReplace:
+INSERT OR REPLACE INTO card_cache (
+    user_document, year, week, numbers
+) VALUES (?, ?, ?, ?);
+
+deleteAll:
+DELETE FROM card_cache;

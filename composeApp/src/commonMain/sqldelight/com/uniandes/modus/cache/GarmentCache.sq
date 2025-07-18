@@ -1,0 +1,21 @@
+CREATE TABLE garment_cache (
+    reference TEXT PRIMARY KEY,
+    name TEXT NOT NULL,
+    images TEXT NOT NULL,
+    sizes TEXT NOT NULL,
+    category TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM garment_cache;
+
+selectOne:
+SELECT * FROM garment_cache WHERE reference = ?;
+
+insertOrReplace:
+INSERT OR REPLACE INTO garment_cache (
+    reference, name, images, sizes, category
+) VALUES (?, ?, ?, ?, ?);
+
+deleteAll:
+DELETE FROM garment_cache;

@@ -1,0 +1,18 @@
+CREATE TABLE user_save_garment_cache (
+    garment_reference TEXT PRIMARY KEY,
+    garment TEXT NOT NULL
+);
+
+selectAll:
+SELECT * FROM user_save_garment_cache;
+
+selectOne:
+SELECT * FROM user_save_garment_cache WHERE garment_reference = ?;
+
+insertOne:
+INSERT OR REPLACE INTO user_save_garment_cache (
+    garment_reference, garment
+) VALUES (?, ?);
+
+deleteOne:
+DELETE FROM user_save_garment_cache WHERE garment_reference = ?;

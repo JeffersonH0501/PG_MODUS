@@ -1,0 +1,23 @@
+CREATE TABLE payment_cache (
+    user_document TEXT NOT NULL,
+    year TEXT NOT NULL,
+    week TEXT NOT NULL,
+    state TEXT NOT NULL,
+    month TEXT NOT NULL,
+    day TEXT NOT NULL,
+    PRIMARY KEY (user_document, year, week)
+);
+
+selectByUserYear:
+SELECT * FROM payment_cache WHERE user_document = ? AND year = ?;
+
+insertOrReplace:
+INSERT OR REPLACE INTO payment_cache (
+    user_document, year, week, state, month, day
+) VALUES (?, ?, ?, ?, ?, ?);
+
+updateState:
+UPDATE payment_cache SET state = ? WHERE user_document = ? AND year = ? AND week = ?;
+
+deleteAll:
+DELETE FROM payment_cache;

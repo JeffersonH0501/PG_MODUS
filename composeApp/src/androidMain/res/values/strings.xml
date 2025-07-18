@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Modus</string>
+    <string name="google_api_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCI86hP883kb-QuYrdaT87hz2PGb20F8DE</string>
+</resources>

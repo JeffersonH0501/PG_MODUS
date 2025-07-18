@@ -1,0 +1,21 @@
+CREATE TABLE game_cache (
+    year TEXT NOT NULL,
+    week TEXT NOT NULL,
+    month TEXT NOT NULL,
+    day TEXT NOT NULL,
+    numbers_selected TEXT NOT NULL,
+    winners TEXT NOT NULL,
+    stream_id TEXT,
+    PRIMARY KEY (year, week)
+);
+
+selectGameByYearWeek:
+SELECT * FROM game_cache WHERE year = ? AND week = ?;
+
+insertOrReplace:
+INSERT OR REPLACE INTO game_cache (
+    year, week, month, day, numbers_selected, winners, stream_id
+) VALUES (?, ?, ?, ?, ?, ?, ?);
+
+deleteAll:
+DELETE FROM game_cache;
