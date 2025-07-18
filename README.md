@@ -1,10 +1,10 @@
-# 📱 MODUS
+## 📱 MODUS
 
 Este es un proyecto desarrollado con **Kotlin Multiplatform** usando **Android Studio**, el cual permite compartir código entre plataformas como Android y JVM (u otras si están habilitadas). El objetivo del proyecto es desarrollar una aplicación multiplataforma que integre un **módulo de pagos periódicos**, **juegos de bingo en vivo** y un **catálogo virtual de ropa**, todo ello conectado a una base de datos alojada en **Supabase**. La aplicación está diseñada para fomentar el hábito del ahorro mediante la gamificación, permitiendo a los usuarios participar en dinámicas semanales y canjear recompensas, aprovechando la sincronización en tiempo real y los servicios backend provistos por Supabase.
 
 ---
 
-## 🧰 Tecnologías utilizadas
+### 🧰 Tecnologías utilizadas
 
 Este proyecto utiliza una amplia variedad de tecnologías y librerías modernas, tanto del ecosistema de Kotlin Multiplatform como del entorno Android. A continuación se detallan las principales:
 
